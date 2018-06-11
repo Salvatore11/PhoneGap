@@ -1,0 +1,102 @@
+<div id="reg-part-2-toolbar" data-role="header" data-position="fixed">
+    <h1 id="reg-part-2-header-text">Registrazione (2) </h1>
+    <a id="reg-part-2-back" onclick="regPart2.backButtonClick()" class="ui-btn-left ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-left ui-icon-carat-l">Indietro</a>
+    <a id="reg-part-2-next" onclick="regPart2.nextButtonClick()" class="ui-btn-right ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-right ui-icon-carat-r">Avanti</a>
+</div>
+
+<div role="main" class="ui-content" style="padding-left: 5%; padding-right: 5%;">
+    <h4 style="text-align: center">Composizione del nucleo famigliare*:</h4>
+
+    <!-- Partner -->
+    <table style="width: 100%;">
+        <tr>
+            <td style="width: 40%;">
+                Compagno/a:
+            </td>
+            <td style="width: 60%;">
+                <input onclick="regPart2.partnerCbClick()" type="checkbox" name="partner-cb" id="partner-cb">
+                <label for="partner-cb" style="padding-top: 5px; padding-bottom: 5px;">
+                    <small>Preferisco non specificare.</small>
+                </label>
+            </td>
+        </tr>
+        <tr id="tr-partner">
+            <td style="width: 40%;">
+                <fieldset data-role="controlgroup" data-type="horizontal">
+                    <input onclick="regPart2.partnerYesClick()" type="radio" name="partner-radio-choice" id="partner-radio-choice-y" value="y">
+                    <label for="partner-radio-choice-y">Sì</label>
+
+                    <input onclick="regPart2.partnerNoClick()" type="radio" name="partner-radio-choice" id="partner-radio-choice-n" value="n"
+                        checked="checked">
+                    <label for="partner-radio-choice-n">No</label>
+                </fieldset>
+            </td>
+            <td style="width: 60%;">
+                <input id="partner-age" type="number" placeholder="Inserisci l'età" disabled="disabled">
+            </td>
+        </tr>
+    </table>
+
+    <!-- Sons -->
+    <table style="width: 100%;">
+        <tr>
+            <td style="width: 40%;">
+                Figli conviventi:
+            </td>
+            <td style="width: 60%;">
+                <input onclick="regPart2.sonsCbClick()" type="checkbox" name="sons-cb" id="sons-cb">
+                <label for="sons-cb" style="padding-top: 5px; padding-bottom: 5px;">
+                    <small>Preferisco non specificare.</small>
+                </label>
+            </td>
+        </tr>
+        <tr id="tr-sons">
+            <td style="width: 40%;">
+                <fieldset data-role="controlgroup" data-type="horizontal">
+                    <input onclick="regPart2.sonsYesClick()" type="radio" name="sons-radio-choice" id="sons-radio-choice-y" value="y">
+                    <label for="sons-radio-choice-y">Sì</label>
+
+                    <input onclick="regPart2.sonsNoClick()" type="radio" name="sons-radio-choice" id="sons-radio-choice-n" value="n" checked="checked">
+                    <label for="sons-radio-choice-n">No</label>
+                </fieldset>
+            </td>
+            <td style="width: 60%;">
+                <a onclick="regPart2.sonsButtonClicked()" id="sons-button" class="ui-btn ui-corner-all ui-state-disabled">Inserisci</a>
+            </td>
+        </tr>
+    </table>
+
+ 
+    <!-- Pets -->
+    <table style="width: 100%;">
+        <tr>
+            <td style="width: 40%;">
+                Animali domestici:
+            </td>
+            <td style="width: 60%;">
+                <input onclick="regPart2.petsCbClick()" type="checkbox" name="pets-cb" id="pets-cb">
+                <label for="pets-cb" style="padding-top: 5px; padding-bottom: 5px;">
+                    <small>Preferisco non specificare.</small>
+                </label>
+            </td>
+        </tr>
+        <tr id="tr-pets">
+            <td style="width: 40%;">
+                <fieldset data-role="controlgroup" data-type="horizontal">
+                    <input onclick="regPart2.petsYesClick()" type="radio" name="pets-radio-choice" id="pets-radio-choice-y" value="y">
+                    <label for="pets-radio-choice-y">Sì</label>
+
+                    <input onclick="regPart2.petsNoClick()" type="radio" name="pets-radio-choice" id="pets-radio-choice-n" value="n" checked="checked">
+                    <label for="pets-radio-choice-n">No</label>
+                </fieldset>
+            </td>
+            <td style="width: 60%;">
+                <select name="pets-select" id="pets-select">
+                    <option value="Cani" selected="selected">Cani</option>
+                    <option value="Gatti">Gatti</option>
+                    <option value="Altro">Altro</option>
+                </select>
+            </td>
+        </tr>
+    </table>
+</div>

@@ -1,0 +1,36 @@
+<div id="sons-toolbar" data-role="header" data-position="fixed">
+    <h1>Figli</h1>
+    <a id="sons-back" onclick="sons.onBackButtonClick()" class="ui-btn-left ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-left ui-icon-carat-l">Indietro</a>
+</div>
+
+<div role="main" class="ui-content">
+    <!-- Sons list -->
+    <ul id="sons" data-role="listview" data-inset="true"></ul>
+
+    <div class="zoom" style="bottom: 10px; right: 20px;">
+        <a href="#add-son-popup" data-rel="popup" data-position-to="window" data-transition="slideup" class="zoom-fab zoom-btn-large"
+            style="color:white">+</a>
+        <!-- Add a son popup -->
+        <div data-role="popup" id="add-son-popup"style="padding: 10px 10px; border-color: transparent;">
+
+            <label for="name-input">Nome:</label>
+            <input type="text" id="name-input" value="">
+            <label for="eta-input">Età (opzionale):</label>
+            <input type="number" id="eta-input" value="">
+
+            <a class="ui-btn ui-corner-all ui-shadow ui-btn-b" onclick="sons.onAddButtonClick()" style="margin-top:20px">Aggiungi</a>
+        </div>
+    </div>
+
+    <!--<a href="#delete-son-popup" id="delete-popup-button" data-rel="popup" data-position-to="window" data-transition="pop" class="ui-btn ui-corner-all">Elimina</a>-->
+    <div data-role="popup" id="delete-son-popup" data-dismissible="false" style="max-width:400px;">
+        <div role="main" class="ui-content">
+        
+            <h3 style="text-align: center" class="ui-title">Sei sicuro?</h3>
+        
+            <a href="#" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b" data-rel="back">No</a>
+        
+            <a id="delete-yes" class="ui-btn ui-corner-all ui-shadow ui-btn-inline ui-btn-b" data-rel="back" data-transition="flow">Si</a>
+            </div>
+    </div>
+</div>

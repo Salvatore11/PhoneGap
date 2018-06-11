@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "258793369939",
+    "firebase_url": "https://smart-community-42d36.firebaseio.com",
+    "project_id": "smart-community-42d36",
+    "storage_bucket": "smart-community-42d36.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:258793369939:android:d91a9c351f73cfa2",
+        "android_client_info": {
+          "package_name": "it.frametech.cibus"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "258793369939-7dqio24eu1isstsmd33olroq4ejik68u.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCwrLpe-pVeFJeyF-HeKRzWd_KBniupvYg"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

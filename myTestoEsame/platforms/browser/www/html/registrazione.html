@@ -1,0 +1,81 @@
+<script src="../js/registrazione.js"></script>
+
+<!--Toolbar-->
+<div id="registrazione-toolbar" data-role="header" data-position="fixed" style="display: inline;">
+    <h1>Registrazione</h1>
+    <a onclick="registr.backButton()" class="ui-btn ui-btn-left ui-corner-all ui-mini ui-btn-icon-left">
+        Indietro
+    </a>
+</div>
+
+<div id="registrazione-main" role="main" class="ui-content" style="margin-top: 15px; padding-left: 5%; padding-right: 5%;">
+    <br>
+    <h3>Compila i dati richiesti per registrarti</h3>
+    <div style= "margin-top: 10px">
+        <input type="text" id="inserisci-nome" name="inserisci-nome" value="" placeholder="Nome">
+    </div>
+    <br>
+    <div style="margin-top: 8px">
+        <input type="text" id="inserisci-cognome" name="inserisci-cognome" value="" placeholder="Cognome">
+    </div>
+    <br>
+    <div style="margin-top: 8px">
+        <input type="text" id="inserisci-email" name="inserisci-email" value="" placeholder="E-mail">
+    </div>
+     <!--radio button  sesso-->
+    
+    <form action="">        
+        <input type="radio" name="sesso" value="maschio">M
+        <input type="radio" name="sesso" value="femmina">F
+    </form>
+   
+    <br>
+    <!--checkbox data di nasciata-->
+    <div style="margin-top: 10px">
+            <h3>Data di danscita</h3>
+            <input onclick="registr.dataNasciata()" id="checkbox-dataNascita" type="checkbox">
+            <label for="dataNasciatatext" style="padding-top: 5px; padding-bottom: 5px;">
+                <small> preferisco non specificare</small>
+            </label>
+
+    </div>
+            
+
+    <!--liste della data di nasciata-->
+    <div id="liste-data">
+            
+            <select id="dataNasciata-giorno" name="dataNasciata-giorno"></select>
+            
+            <select id="dataNasciata-mese" name="dataNasciata-mese"></select>
+            
+             <select id="dataNasciata-anno" name="dataNasciata-anno"></select>
+    </div>
+    
+    <br>
+   
+    <!--lista occupazione-->
+    <div style="margin-top: 8px">
+        <form>
+            <p>inserisci la tua occupazione</p>
+            <select name="occupazione">
+                <option value="studente" > studente</option>
+                <option value="impiegato"> impiegato</option>
+                <option value="professionista"> professionista</option>
+                <option value="nullafacente">nullafacente</option>
+            </select>
+        </form>
+    </div>
+    <br>
+    <div style="margin-top: 8px">
+        <input onclick="registr.contratto" type="checkbox" id="contratto-cb">
+        <label for="text-checkbox" style="padding-left: 5%; padding-right: 5%">
+                Dichiaro di avere preso visione del contratto
+        </label>
+    </div>
+    <!-- bottone registrazione-->
+    <div style="margin-top: 20;">
+        <a onclick="registr.registrati()" class="ui-btn ui-corner-all">
+            Registrati
+        </a>
+    </div>
+</div> 

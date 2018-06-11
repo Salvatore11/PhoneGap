@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="msapplication-tap-highlight" content="no" />
+	<!--<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width" />-->
+	<meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi, viewport-fit=cover" />
+	<!-- This is a wide open CSP declaration. To lock this down for production, see below. -->
+	<!--<meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline' gap:; style-src 'self' 'unsafe-inline'; media-src *" />-->
+	<!--<meta http-equiv="Content-Security-Policy" content="default-src *; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline'; media-src *; img-src 'self' data:">-->
+
+	<link rel="stylesheet" href="../jquery/jquery.mobile-1.4.5.min.css" />
+	<script src="../jquery/jquery-1.11.1.min.js"></script>
+	<script src="../jquery/jquery.mobile-1.4.5.min.js"></script>
+	<script src="../cordova.js"></script>
+
+	<script src="../js/main.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="../css/style.css">
+
+	<link rel="stylesheet" href="../css/themes/jquery.mobile.flatui.min.css" />
+	<link rel="stylesheet" href="../css/themes/jquery.mobile.icons.min.css" />
+
+	<title>Gestione Login</title>
+</head>
+
+<body>
+	<!-- Login -->
+	<div id="page-login" data-role="page">
+		<!-- Toolbar -->
+		<div id="login-toolbar" data-role="header" data-position="fixed" style="display: none;">
+			<h1>Accedi</h1>
+		</div>
+	
+		<div id="login-main" role="main" class="ui-content" style="padding-left: 5%; padding-right: 5%; display: none;">
+			<!-- Logo -->
+			<table style="margin: auto;">
+				<tr>
+					<td style="text-align: center;">
+						<img style="width:50%; heigth:50%" src="../img/logo.jpg" />
+					</td>
+				</tr>
+			</table>
+
+			<div>
+				<input type="text" name="login-email" id="login-email" value="" placeholder="E-Mail">
+			</div>
+			<div style="margin-top: 15px">
+				<input type="password" name="login-password" id="login-password" value="" placeholder="Password">
+			</div>
+			<div style="margin-top: 15px; padding-left: 20%; padding-right: 20%">
+				<a onclick="login.authenticate()" class="ui-btn ui-corner-all">Accedi</a>
+			</div>
+			<div style="margin-top: 15px; text-align: center;">
+				<a onclick="login.register()">
+					<b>
+						<small>Non hai un account? Registrati!</small>
+					</b>
+				</a>
+			</div>
+			<div style="padding-top: 10px; text-align: center;">
+				<a onclick="login.passwordRecovery()">
+					<b>
+						<small>Hai dimenticato la password?</small>
+					</b>
+				</a>
+			</div>
+			
+			<div id="app-version" style="text-align: center; bottom: 1%; left: 0%; position: absolute; width: 100%; color: lightgray;"></div>
+		</div>
+	</div>
+
+	<!-- Registration (Part 1) -->
+	<div data-role="page" id="page-reg-part-1">
+		<script>
+			$("#page-reg-part-1").load("reg-part-1.html");
+		</script>
+	</div>
+
+	<!-- Registration (Part 2) -->
+	<div data-role="page" id="page-reg-part-2">
+		<script>
+			$("#page-reg-part-2").load("reg-part-2.html");
+		</script>
+	</div>
+
+	<!-- Registration (Part 3) -->
+	<div data-role="page" id="page-reg-part-3">
+		<script>
+			$("#page-reg-part-3").load("reg-part-3.html");
+		</script>
+	</div>
+
+	<!-- Registration (Sons) [Sons] -->
+	<div data-role="page" id="page-sons">
+		<script>
+			$("#page-sons").load("sons.html");
+		</script>
+	</div>
+
+
+	<script>
+		main.init();
+	</script>
+</body>
+</html>

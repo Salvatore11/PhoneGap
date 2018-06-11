@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="msapplication-tap-highlight" content="no" />
+    <link rel="stylesheet" href="../jquery/jquery.mobile-1.4.5.min.css" />
+    <script src="../jquery/jquery-1.11.1.min.js"></script>
+    <script src="../jquery/jquery.mobile-1.4.5.min.js"></script>
+    <script src="../cordova.js"></script>
+    <script src="../js/main.js"></script>
+    <link rel="stylesheet" type="text/css" href="../css/style.css">
+    <link rel="stylesheet" href="../css/themes/jquery.mobile.flatui.min.css" />
+    <link rel="stylesheet" href="../css/themes/jquery.mobile.icons.min.css" />
+    <title>Gestione Login</title>
+</head>
+
+<body>
+    <!--Login-->
+    <div id="page-login" data-role="page">
+        <!--Toolbar-->
+        <div id="login-toolbar" data-role="header" data-position="fixed" style="display: none;">
+            <h1>Accedi</h1>
+        </div>
+
+        <div id="login-main" role="main" class="ui-content" style="padding-left: 5%; padding-right: 5%; display: none;">
+            <table style="margin: auto;">
+                <tr>
+                    <td style="text-align: center">
+                        <img style="width: 25%; height: 25%" src="../img/logo.jpg" />
+                    </td>
+                </tr>
+            </table>
+            <br>
+            
+            <div>
+                <input type="text" id="login-Email" name="login-Email" value="" placeholder="E-Mail">
+            </div>
+            <br>
+            
+            <div style="margin-top: 15px">
+                <input type="password" id="login-password" value="" placeholder="Password">
+            </div>
+            <br>
+            <div style="margin-top: 15px; padding-left: 20%; padding-right: 20%;">
+                <a onclick="login.Authenticate()" class="ui-btn ui-corner-all ">
+                    Accedi
+                </a>
+            </div>
+            <br>
+            <div style="margin-top: 15px; text-align: center;">
+                <a onclick="login.register()" >
+                    <b>
+                        <small>Non hai un account? Registrati!</small>
+                    </b>
+                </a>
+            </div>
+            <div style="margin-top: 15px; text-align: center">
+                <a onclick="login.passwordRecovery()">
+                    <b>
+                        <small>Hai dimenticato la password?</small>
+                    </b>
+                </a>
+            </div>
+            <div id="app-version" style="text-align: center; bottom:1%; left: 0%; position: absolute; width: 100%; color: lightgrey">
+            </div>
+        </div>
+
+    </div>
+
+    <!--dato che è anche la main inizializzo tutte le mie pagine-->
+
+    <!-- Registrazione passwordRecovery-1 (parte1)-->
+    <div data-role="page" id="page-passwordRecovery-1">
+        <script>
+            $("#page-passwordRecovery-1").load("passwordRecovery-1.html")
+           
+        </script>
+    </div>
+
+    <!-- Registrazione conferma_mail-->
+    <div data-role="page" id="page-confermaMail">
+        <script>
+            $("#page-confermaMail").load("conferma_mail.html")
+        </script>
+    </div>
+
+    <!--pagina accesso-->
+    <div data-role="page" id="page-accesso">
+        <script>
+            $("#page-accesso").load("accesso.html")  
+        </script>
+    </div>
+<!--pagina registrazione-->
+    <div data-role="page" id="page-registrazione">
+            <script>
+                $("#page-registrazione").load("registrazione.html")  
+            </script>
+        </div>
+
+        <!--pagina registrazione2-->
+    <div data-role="page" id="page-registrazione2">
+            <script>
+                $("#page-registrazione2").load("registrazione2.html")  
+            </script>
+    </div>
+
+
+    <script>
+        main.init();
+    </script>
+
+</body>
+</html>

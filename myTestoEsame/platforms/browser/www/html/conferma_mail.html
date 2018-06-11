@@ -1,0 +1,26 @@
+<!--carico il file js associato alla pagina html-->
+<script src="../js/conferma_mail.js"></script>
+
+<div id="passwordRecovery-toolbar" data-role="header" data-position="fixed" style="display: inline;">
+    <h1>Assistenza</h1>
+    <!--inserisco il bottone indietro-->
+    <a id="passwordRecovery-indietro" onclick="passwordButton.backButtonClick()" class="ui-btn-left ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-left ui-icon-carat-l">
+        Indietro
+    </a>
+</div>
+<br>
+<div role="main" class="ui-content" style="padding-left: 5%; padding-right: 5%;">
+    <div style="text-align: left ">
+        <b>Indirizzo e-mail*:</b>
+    </div>
+    <div style="margin-top: 10px">
+        <input type="text" id="input-email" value="">
+    </div>
+    <br>
+    <!--bottone iniva richiesta-->
+     <div style="margin-top: 10px; padding-left: 20%; padding-right: 20%;">
+        <a onclick="verify.ottieniPassword()" class="ui-btn ui-corner-all" >
+            OttieniPassword
+        </a>
+    </div> 
+</div>

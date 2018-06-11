@@ -1,0 +1,84 @@
+<div id="reg-part-1-toolbar" data-role="header" data-position="fixed">
+    <h1 id="reg-part-1-header-text">Registrazione</h1>
+    <a id="reg-part-1-back" onclick="regPart1.backButtonClick()" class="ui-btn-left ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-left ui-icon-carat-l">Indietro</a>
+    <a id="reg-part-1-next" onclick="regPart1.nextButtonClick()" class="ui-btn-right ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-right ui-icon-carat-r">Avanti</a>
+</div>
+
+<div role="main" class="ui-content" style="padding-left: 5%; padding-right: 5%;">
+    <table style="width: 100%;">
+        <tr>
+            <td style="width: 20%;">Nome*:</td>
+            <td style="width: 80%;">
+                <input id="name" type="text">
+            </td>
+        </tr>
+        <tr>
+            <td style="width: 20%;">Cognome*:</td>
+            <td style="width: 80%;">
+                <input id="surname" type="text">
+            </td>
+        </tr>
+    </table>
+
+    <table style="width: 100%;">
+        <tr>
+            <td style="width: 40%;">Data di nascita:</td>
+            <td style="width: 60%;">
+                <input onclick="regPart1.birthdayCbClick()" type="checkbox" name="birthday-cb" id="birthday-cb">
+                <label for="birthday-cb" style="padding-top: 5px; padding-bottom: 5px;">
+                    <small>Preferisco non specificare.</small>
+                </label>
+            </td>
+        </tr>
+    </table>
+
+    <table id="birthday-fields" style="width: 100%;">
+        <tr>
+            <td style="width: 33%;">
+               <select name="birthday-day-select" id="birthday-day-select"></select>
+            </td>
+            <td style="width: 33%;">
+                <select name="birthday-month-select" id="birthday-month-select"></select>
+            </td>
+            <td style="width: 33%;">
+                <select name="birthday-year-select" id="birthday-year-select"></select>
+            </td>
+        </tr>
+    </table>
+
+    <!-- Gender -->
+    <table style="width: 100%; padding-top: 10px;">
+        <tr>
+            <td style="width: 20%;">
+                <label>Sesso:</label>
+            </td>
+            <td style="width: 80%;">
+                <form>
+                    <fieldset data-role="controlgroup">
+                        <label for="gender-radio-choice-nspec">Preferisco non specificare</label>
+                        <input type="radio" name="gender-radio-choice" id="gender-radio-choice-nspec" value="nspec" checked="checked">
+                        <input type="radio" name="gender-radio-choice" id="gender-radio-choice-m" value="m">
+                        <label for="gender-radio-choice-m">Maschio</label>
+                        <input type="radio" name="gender-radio-choice" id="gender-radio-choice-f" value="f">
+                        <label for="gender-radio-choice-f">Femmina</label>
+                    </fieldset>
+                </form>
+
+            </td>
+        </tr>
+    </table>
+
+    <!-- Mobile phone number -->
+    <table style="width: 100%;">
+        <tr>
+            <td style="width: 20%;">Cellulare:</td>
+            <td>
+                <input id="mobile-prefix" disabled="disabled" type="text" value="+39">
+            </td>
+            <td style="width: 60%;">
+                <input id="mobile" type="number">
+            </td>
+        </tr>
+    </table>
+
+</div>
